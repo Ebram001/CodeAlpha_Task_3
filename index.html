@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="CSS/all.min.css" rel="stylesheet">
+    <link href="CSS/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>Issue Tracker</title>
+</head>
+<body>
+
+<div class="container mt-5">
+    <h1 class="mb-4">Issue Tracker</h1>
+
+    <form id="ticketForm" class="mb-4">
+      <div class="mb-3">
+          <label for="issueTitle" class="form-label">Issue Title</label>
+          <input type="text" class="form-control" id="issueTitle" required>
+      </div>
+      <div class="mb-3">
+          <label for="ticketStatus" class="form-label">Ticket Status</label>
+          <select class="form-control" id="ticketStatus" required>
+              <option value="Open">Open</option>
+              <option value="Solved">Solved</option>
+              <option value="Pending">Pending</option>
+          </select>
+      </div>
+      
+      <div class="mb-3">
+          <label for="priority" class="form-label">Priority</label>
+          <select class="form-control" id="priority" required>
+              <option value="Low">Low</option>
+              <option value="Medium">Medium</option>
+              <option value="High">High</option>
+          </select>
+      </div>
+      <button type="submit" class="btn btn-primary ">Create Ticket</button>
+  </form>
+
+
+  <table class="table">
+      <thead>
+      <tr>
+          <th scope="col">#</th>
+          <th scope="col">Issue</th>
+          <th scope="col">Requested</th>
+          <th scope="col">Status</th>
+          <th scope="col">Priority</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody id="ticketTableBody"></tbody>
+  </table>
+</div>
+
+<script src="JS/code.jquery.com_jquery-3.7.0.min.js"></script>
+<script src="JS/bootstrap.bundle.min.js"></script>
+<script src="JS/main.js"></script>
+</body>
+</html>
